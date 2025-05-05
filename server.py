@@ -8,7 +8,7 @@ import io
 app = FastAPI()
 
 # Load Model
-model = YOLO(r'weights\100e203.pt')  # Change to your custom model if needed
+model = YOLO(r'weights/100e203.pt')  # Change to your custom model if needed
 
 @app.get("/")  # Optional: homepage test route
 def read_root():
