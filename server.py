@@ -3,9 +3,20 @@ from ultralytics import YOLO
 import uvicorn
 from PIL import Image
 import io
+from fastapi.middleware.cors import CORSMiddleware
 
-# Create FastAPI app
 app = FastAPI()
+
+# ✅ Add this CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or ["http://localhost:5500"] if using Live Server
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Your predict endpoint...
 
 # Load Model
 model = YOLO(r'weights/100e203.pt')  # Change to your custom model if needed
