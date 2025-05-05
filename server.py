@@ -8,7 +8,7 @@ import io
 app = FastAPI()
 
 # Load Model
-model = YOLO(r'D:\STUDY_HARD\Uni\2024.2\THESIS\Rice-Plant-Disease-Detection\runs\train\100e_20_3\weights\100e203.pt')  # Change to your custom model if needed
+model = YOLO(r'weights\100e203.pt')  # Change to your custom model if needed
 
 @app.get("/")  # Optional: homepage test route
 def read_root():
