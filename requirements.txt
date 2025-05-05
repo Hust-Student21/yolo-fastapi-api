@@ -2,3 +2,5 @@ fastapi
 uvicorn
 pillow
 ultralytics
+python-multipart
+python-dotenv
